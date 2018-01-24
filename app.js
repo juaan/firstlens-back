@@ -8,10 +8,10 @@ let express = require('express'),
     app = express()
 
 
-
+app.use(cors());
 app.use(bodyPars.json())
 app.use(bodyPars.urlencoded({extended:false}))
-app.use(cors());
+
 
 app.use('/',index);
 app.use('/users',users);
